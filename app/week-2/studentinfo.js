@@ -8,8 +8,8 @@ export default function StudentInfo() {
       <p className="mb-2">Name Zander Fields</p>
       <p>
         GitHub Repository:{" "}
-        <Link 
-          href="https://github.com/zander1650/cprg306-assignments" 
+        <Link
+          href="https://github.com/zander1650/cprg306-assignments"
           className="text-blue-600 underline"
         >
           Visit my GitHub
