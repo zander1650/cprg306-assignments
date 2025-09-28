@@ -1,4 +1,3 @@
-import React from "react";
 import Item from "./item";
 
 function ItemList() {
@@ -19,7 +18,7 @@ function ItemList() {
 
   return (
     <div className="flex justify-center mt-8">
-      <ul className="w-100 p-6 bg-blue-50 rounded-xl shadow-lg space-y-3s">
+      <ul className="w-100 p-6 bg-blue-500 rounded-xl shadow-lg space-y-3s">
         {items.map((item, index) => (
           <Item
             key={index}
