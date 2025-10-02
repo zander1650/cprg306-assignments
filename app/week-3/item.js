@@ -1,9 +1,8 @@
 function Item({ name, quantity, category }) {
   return (
-    <li className="flex justify-between items-center p-3 mb-2 bg-white rounded-lg shadow">
+    <li className="items-center mb-2 p-3 bg-white rounded-lg shadow">
       <div className="font-semibold">{name}</div>
-      <div className="text-sm text-gray-700">Qty: {quantity}</div>
-      <div className="text-sm text-gray-500 italic">{category}</div>
+      <div className="text-sm text-gray-700">  Qty: {quantity} in {category}</div>
     </li>
   );
 }
