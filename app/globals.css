@@ -11,9 +11,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-body {
-  background-color: black;
-}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
