@@ -1,14 +1,39 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useUserAuth } from "../_utils/auth-context"; 
+
 import NewItem from "./new-item";
 import ItemList from "./item-list";
 import MealIdeas from "./meal-ideas";
 import itemsData from "./item.json";
 
-export default function Page() {
+export default function ShoppingListPage() {
+  const { user } = useUserAuth();
+  const router = useRouter();
+  const [authChecked, setAuthChecked] = useState(false); // track if auth is loaded
+
   const [items, setItems] = useState(itemsData);
   const [selectedItemName, setSelectedItemName] = useState("");
+
+  // Wait for auth state to load
+  useEffect(() => {
+    setAuthChecked(true);
+  }, [user]);
+
+  // Redirect if user is not logged in
+  useEffect(() => {
+    if (authChecked && !user) {
+      router.replace("/week-9"); // redirect to landing/login page
+    }
+  }, [authChecked, user, router]);
+
+ 
+
+  if (!user) {
+    return null; // don't render the page while redirecting
+  }
 
   function handleAddItem(newItem) {
     setItems((prev) => [...prev, newItem]);
