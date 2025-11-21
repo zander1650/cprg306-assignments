@@ -9,9 +9,10 @@ async function fetchMealIdeas(ingredient)
     {
         const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`);
         const data = await response.json();
-        return data.meals;
+        return data.meals || [];
     } catch (error){
         console.error(error);
+        return [];
     }
 }
 
@@ -22,7 +23,7 @@ export default function MealIdeas({ingredient})
     async function loadMealIdeas()
     {
         const fetchedMeals = await fetchMealIdeas(ingredient);
-        setMeals(fetchedMeals);
+        setMeals(fetchedMeals || []);
     }
 
     useEffect(() => {
@@ -51,7 +52,7 @@ export default function MealIdeas({ingredient})
                 alt={meal.strMeal}
                 className="w-14 h-14"
             ></img>
-            <span className="text-blue-500 hover:underline">{meal.strMeal}</span>
+            <span className="text-black-500 hover:underline">{meal.strMeal}</span>
             </a>
           </li>
         ))}
