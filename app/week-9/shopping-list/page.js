@@ -25,14 +25,14 @@ export default function ShoppingListPage() {
   // Redirect if user is not logged in
   useEffect(() => {
     if (authChecked && !user) {
-      router.replace("/week-9"); // redirect to landing/login page
+      router.replace("/week-9"); 
     }
   }, [authChecked, user, router]);
 
  
 
   if (!user) {
-    return null; // don't render the page while redirecting
+    return null; // don't render the page while it redirects
   }
 
   function handleAddItem(newItem) {
