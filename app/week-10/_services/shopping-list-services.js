@@ -2,7 +2,7 @@ import { db } from "../_utils/firebase";
 import { collection, addDoc, getDocs, query, deleteDoc, doc } from "firebase/firestore";
 
 
-export async function getItems(userId) {
+export async function getItems(userId) 
     // check if the userid is valid
     if (!userId) return [];
     try {
