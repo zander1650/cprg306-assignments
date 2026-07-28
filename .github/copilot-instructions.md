@@ -1,7 +1,7 @@
 # Copilot Instructions for AI Agents
 
 ## Project Overview hui
-This is a Next.js project bootstrapped with `create-next-app`. The codebase follows the Next.js App Router structure, with all main pages and components located under the `app/` directory.
+This is a Next.js project bootstrapped with `create-next-app`. The codebn hiase follows the Next.js App Router structure, with all main pages and components located under the `app/` directory.
 
 ## Key Directories & Files
 - `app/` — Main application code. Each subfolder (e.g., `week-3/`) represents a feature or assignment.
