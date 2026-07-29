@@ -11,7 +11,7 @@ This is a Next.js project bootstrapped with `create-next-app`. The codebn hiase 
 - `globals.css` — Global styles for the app.
 - `package.json` — Dependency management and scripts.
 - `README.md` — Basic setup and usage instructions.
-
+hi
 ## Developer Workflows
 - **Start Dev Server:** `npm run dev` (or `yarn dev`, `pnpm dev`, `bun dev`)
 - **Hot Reload:** Editing files in `app/` auto-updates the browser.
